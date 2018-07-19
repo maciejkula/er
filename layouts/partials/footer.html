@@ -1,7 +1,9 @@
 <footer class="content-width mt0 mt5-l mb4 f6 center ph3 gray tc tl-l">
 
   {{if not .IsHome }}
+  {{ if not .Params.noComments }}
   {{ template "_internal/disqus.html" . }}
+  {{ end }}
   {{ end }}
 
   <hr class="dn db-l ml0-l gray w3"><br>
